@@ -24,7 +24,6 @@ public class FlowEx28 {
                 System.out.println("UP");
             }
         }
-
         System.out.println("끝!");
     }
 }
