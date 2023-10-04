@@ -2,7 +2,7 @@ package com.green.day5.ch4;
 
 public class RandomValMission2 {
     public static void main(String[] args) {
-       final int MIN = 15, MAX = 15;
+       final int MIN = 14, MAX = 15;
 
         // 리터럴 더 이상 하지 않는다.
         // MIN, MAX 상수만 사용하여
