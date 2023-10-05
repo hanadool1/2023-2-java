@@ -8,7 +8,7 @@ public class While {
         }
         System.out.println("-----------------------");
         int i=0;
-        while (i<10) {
+        while (i<10) {  // 조건식 확인체크한 후 실행
             System.out.println("while - " + i++);
 
         }
