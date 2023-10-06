@@ -11,10 +11,12 @@ public class FlowEx30Result {
 
        final int TARGET = 100;
         while (true) {
+            System.out.printf("sum : %d\n", sum);
             sum += ++i; // ++i, sum = sum + i을 줄인 것
             if (sum > TARGET) { break; }
+            System.out.printf("sum : %d, i : %d\n", sum, i);
         }
-        System.out.printf("sum : %d, i : %d\n", sum, i);
+        System.out.println("i : " + i);
 
 //        while (sum < target) {
 //            sum += ++i;

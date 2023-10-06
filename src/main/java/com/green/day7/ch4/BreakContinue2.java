@@ -11,7 +11,9 @@ public class BreakContinue2 {
                 System.out.printf("i : %d - z: %d\n", i, z);
             }
         }
+
         System.out.println("----------------------------");
+
         for (int i = 0; i < 5; i++) {
 
             for (int z = 10; z < 15; z++) {

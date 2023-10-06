@@ -19,7 +19,9 @@ public class FlowEx31Result {
             }
             System.out.println(i);
         }
+
         System.out.println("-------------");
+
         for (int i = 0; i < 11; i++) {
             if (i % 3 != 0) {
                 System.out.println(i);

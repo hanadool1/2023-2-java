@@ -47,11 +47,11 @@ e.g.
             int choice = scanner.nextInt();
 
             if (choice == 0) {
-                break;
-            } else if (choice < 1 || choice > 3) {
+                break;  // 가장 가까운 반복문(while)을 빠져나와서 "프로그램 종료" 출력
+            } else if (choice < 1 || choice > 3) {  // 1보다 작거나 3보다 크면 밑에 문장 출력 후, 다시 반복문 진입
                 System.out.println("메뉴를 잘못 선택하셨습니다.");
             } else {
-                System.out.printf("선택하신 메뉴는 %d번입니다.\n", choice);
+                System.out.printf("선택하신 메뉴는 %d번입니다.\n", choice);    // 문장 출력 후, 다시 반복문 진입
             }
         }
         System.out.println("프로그램을 종료합니다.\n");

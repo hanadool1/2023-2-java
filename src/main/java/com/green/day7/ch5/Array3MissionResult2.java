@@ -9,12 +9,12 @@ public class Array3MissionResult2 {
 
         int[] arr2 =new int[arr1.length + 1]; // 리터럴 사용하지 않음, 유연하게 대응
 
-        for (int i=0; i<arr1.length; i++) {
+        for (int i=0; i<arr1.length; i++) {   // deep copy를 위한 for문
             arr2[i] = arr1[i];
         }
-        arr2[arr1.length] = 20;
+        arr2[arr1.length] = 20; // 마지막 방에 20을 저장
 
-        for (int i=0; i<arr2.length; i++) {
+        for (int i=0; i<arr2.length; i++) {  // 출력을 위한 for문
             System.out.printf("arr2[%d] : %d\n", i , arr2[i]);
         }
     }

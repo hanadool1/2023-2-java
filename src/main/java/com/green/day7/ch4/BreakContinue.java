@@ -12,8 +12,7 @@ public class BreakContinue {
         }
         System.out.println("------------------------");
         for (int i=0; i<10; i++) {
-            System.out.println(i);
-            if (i % 2 == 0) { continue; }   // 특정한 조건일 때, continue 밑에 것을 실행 X
+            if (i % 2 == 0) { continue; }   // 특정한 조건일 때, continue 밑에 것을 실행 X, for문의 경우 증감식으로 올라감
             System.out.println(i);
         }
 
