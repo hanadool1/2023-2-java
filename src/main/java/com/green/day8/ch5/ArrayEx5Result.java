@@ -10,7 +10,8 @@ public class ArrayEx5Result {
         for (int i=0; i<score.length; i++) {
             sum = sum + score[i];   // sum += score[i]
         }
+
         System.out.printf("총점 : %d\n", sum);
-        System.out.printf("평균 : %d\n", sum / 5);
+        System.out.printf("평균 : %d\n", sum / score.length);     // 숫자(변수)말고 배열의 길이값을 넣어야 함.
     }
 }
