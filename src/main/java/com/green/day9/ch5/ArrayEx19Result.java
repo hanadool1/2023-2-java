@@ -23,7 +23,7 @@ public class ArrayEx19Result {
         System.out.println("---------------------------------");
         for (int i=0; i< score.length; i++) {   // 0부터 score의 길이인 5까지 반복
             System.out.printf("%d", i+1);   // 몇번사람인지 출력
-            int sum = 0;    // int형 변수 sum을 선언하고 0으로 초기화
+            int sum = 0;    // int형 변수 sum을 선언하고 0으로 초기화, i++되고 총점 생성 후, sum 다시 0으로 초기화
             for (int z=0; z<score[i].length; z++) { // 0부터 score[i]의 길이인 3까지 반복
                 int val = score[i][z];  // int형 변수 val을 선언하고 score[i][z] 저장
                 sumArr[z] += val; // sumArr[z] = sumArr[z] + val;

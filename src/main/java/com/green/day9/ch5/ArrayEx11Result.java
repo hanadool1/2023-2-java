@@ -29,10 +29,21 @@ public class ArrayEx11Result {
         }
         System.out.println(Arrays.toString(numArr));    // numArr배열의 값 출력, 랜덤값이 들어갔는지 검증
 
+        /*
         for (int i=0; i<LEN; i++) {   // cntArr의 0번방은 0의 개수, 1번방은 1의 개수 count값을 넣는다.
             int val = numArr[i];
             cntArr[val]++;
+            }
+         */
+
+        for (int n : numArr) { // 향상된 for문
+            cntArr[n]++;
         }
+            /*
+            cntArr[val]++;
+            cntArr[val] += 1;
+            cntArr[val] = cntArr + 1;
+             */
         System.out.println(Arrays.toString(cntArr));    // cntArr배열의 값 출력, i의 개수 검증
     }
 }

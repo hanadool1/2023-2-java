@@ -7,6 +7,15 @@ public class MultiArray {
                 {300, 400},
                 {500, 600}
         };
+
+        for (int i=0; i<arr.length; i++) {
+            int[] subArr = arr[i];
+
+            for (int z=0; z< subArr.length; z++) {
+                System.out.printf("arr[%d][%d] : %d\n", i, z, subArr[z]);
+            }
+        }
+
         System.out.println(arr[0][0]);
         System.out.println(arr[0][1]);
         System.out.println(arr[1][0]);
