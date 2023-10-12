@@ -10,7 +10,8 @@ public class TvTest {
         Tv tv2 = new Tv(); // 위에 것과 구조는 같지만 다른 존재
         tv2.channel = 20;
 
-        System.out.println("tv1 == tv2 >> " + (tv1 == tv2));
+        System.out.println("tv1 == tv2 >> " + (tv1 == tv2)); // 주소값 비교, false
+
 
         System.out.println("tv1.channel : " + tv1.channel);
         System.out.println("tv1.power : " + tv1.power);
