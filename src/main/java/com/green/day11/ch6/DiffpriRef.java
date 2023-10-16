@@ -10,7 +10,7 @@ public class DiffpriRef {   // 기본형 매개변수와 참조형 매개변수�
         System.out.println("(1)nb.num : " + nb.num); // 0
         nb.num = 30;    // 30을 nb.num에 저장
         System.out.println("(2)nb.num : " + nb.num); // 30
-        changeVal(nb); // changeVal(참조형) 메소드 호출
+        changeVal(nb); // changeVal(참조형) 메소드 dd 호출
         System.out.println("(3)nb.num : " + nb.num); // 20
     }
 

@@ -10,7 +10,7 @@ public class MethodExam {
         System.out.println("0이 아닙니다.");
     }
 
-    int randomValFromTo(int from, int to) {
+    public int randomValFromTo(int from, int to) {
        return (int)(Math.random()* (to - from + 1)) + from;
     }
 
