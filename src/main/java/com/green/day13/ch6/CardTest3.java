@@ -14,7 +14,7 @@ class Card {
 public class CardTest3 {
     public static void main(String[] args) {
 
-        Card[] cards = CardTest3.makeCards();
+        Card[] cards = CardTest3.makeCards(); // 클래스이름.메소드 호출, 같은공간에 있기 때문에 클래스이름 생략가능
         System.out.println(cards.length);
 
         for (Card c : cards) {
@@ -28,9 +28,13 @@ public class CardTest3 {
         for(int i=0; i< cArr.length; i++) {
             String pattern = patterns[i / 13];
             String denomination = getNumberFromInt((i + 1) % 13);
-            cArr[i] = new Card();
-            cArr[i].pattern = pattern;
-            cArr[i].denomination = denomination;
+//            cArr[i] = new Card();
+//            cArr[i].pattern = pattern;
+//            cArr[i].denomination = denomination;  밑에 4줄과 같은 문장
+            Card c = new Card();
+            cArr[i] = c;
+            c.denomination = denomination;
+            c.pattern = pattern;
         }
         return cArr;
     }

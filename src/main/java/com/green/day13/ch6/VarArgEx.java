@@ -1,8 +1,8 @@
 package com.green.day13.ch6;
 
-public class VarArgEx {
+public class VarArgEx { // 가변인자
 
-    public static void sum(int... arr) {
+    public static void sum(int... arr) { // 배열
         int sum = 0;
         for (int i=0; i< arr.length; i++) {
             sum += arr[i];

@@ -4,11 +4,11 @@ import com.green.day12.ch6.Card;
 
 public class CardTest2 {
     public static void main(String[] args) {
-        Card[] cards = makeCards();
+        Card[] cards = makeCards(); // static메소드 호출(static인지 알 수 있는 이유? new를 통해 객체화 안했기 때문)
         System.out.println(cards.length); // 52
 
         for (Card c : cards) {
-            c.printYourself(); // Spade(A)
+            c.printYourself(); // Card 클래스, c. 접근
         }
     }
 
@@ -44,6 +44,6 @@ public class CardTest2 {
                 cards[cnt++] = c;
             }
         }
-        return cards;
+        return cards; // card[]의 주소값을 리턴
     }
 }
