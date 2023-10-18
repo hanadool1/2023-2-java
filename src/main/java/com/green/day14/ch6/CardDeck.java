@@ -2,8 +2,13 @@ package com.green.day14.ch6;
 
 public class CardDeck { // 카드를 담는 통 1개, 그 안에 카드는 많이 있다.
     Card[] cards; // 전역변수에 선언, CardDeck안에 선언 시(지역변수) 죽음.
+
     public CardDeck() {
-        cards = new Card[52];
+        init();
+    }
+    public void init() {
+        cards = new Card[52]; // cards 전역변수에 선언
+
         String[] patterns = {"Spade", "Heart", "Diamond", "Club"};
         int idx = 0;
         for (int i=0; i< patterns.length; i++) {
@@ -36,8 +41,8 @@ public class CardDeck { // 카드를 담는 통 1개, 그 안에 카드는 많�
     }
 
     public Card getCard() {
-        Card c;
-        while (true) {
+        Card c = null;
+        while (true) { // 무한루프(끝나지않는 반복문), break와 함께 사용
             int rIdx = (int) (Math.random() * cards.length);
             c = cards[rIdx];
             if (c != null) {

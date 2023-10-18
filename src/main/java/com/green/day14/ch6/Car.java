@@ -1,7 +1,7 @@
 package com.green.day14.ch6;
 
 public class Car {
-    String color;
+    String color; // 전역변수 : 객체가 살아있으면 계속 살아있다.
     String gearType; // 변속기 종류 - auto, manual
     int door; // 문의 개수
 
@@ -12,7 +12,7 @@ public class Car {
         this(color,"auto",4); // car2는 color가 객체 생성과 동시에 멤버필드 값이 세팅되어 있음
     }
 
-    public Car(String color, String gearType, int door) { // String 2개, int 1개 받는 생성자
+    public Car(String color, String gearType, int door) { // String 2개, int 1개 받는 생성자, 지역변수
         this.color = color;
         this.gearType = gearType;
         this.door = door;

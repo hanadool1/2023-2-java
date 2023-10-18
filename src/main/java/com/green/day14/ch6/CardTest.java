@@ -16,7 +16,7 @@ public class CardTest {
             c.printMySelf();
         }
         System.out.println("-----");
-        // cd.printAll();
+        // cd.printAll(); null인데 호출해서 null point error가 뜸.
 
 
     }
