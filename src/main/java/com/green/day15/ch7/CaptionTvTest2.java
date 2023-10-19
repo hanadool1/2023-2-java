@@ -31,7 +31,7 @@ public class CaptionTvTest2 {
         ctv.channelUp(); // 자식은 부모에 있는 값 변경 가능, 부모는 자식이 있는 값 변경 불가능
 
         System.out.printf("cTv.channel : %d\n", ctv.channel);
-        ctv.printParentChannel();
+        ctv.printParentChannel(); // 1
 
     }
 }
