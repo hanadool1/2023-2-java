@@ -30,6 +30,8 @@ class PolyArgumentTestVer2_3 {
         buyer.buy(new Audio2());
         buyer.buy(new Audio2());
 
+        buyer.summary(); // 총 구매금액 : 1000만원
+
 
 //        Product2[] arr= buyer.productArr;
 //        for (int i = 0; i < arr.length; i++) {
@@ -47,9 +49,9 @@ class Buyer2 {
     // Product 객체의 주소값 여러개 저장 가능
     private int money;
     private int bonusPoint;
-    Product2[] productArr;
+    private Product2[] productArr;
     int cnt;
-
+    int summary;
     public Buyer2() {
         this.money = 1000;
         this.bonusPoint = 0;
@@ -68,8 +70,12 @@ class Buyer2 {
         productArr[cnt++] = product;
         money -= product.getPrice();
         bonusPoint += product.getBonusPoint();
+        summary += product.getPrice();
         System.out.printf("%s를 구매하셨습니다. money : %d, bonusPoint : %d\n"
                 , product.getName(), money, bonusPoint);
+    }
+    public void summary() {
+        System.out.printf("총 %d만원을 사용했습니다.", summary);
     }
 }
 
