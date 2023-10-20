@@ -5,7 +5,7 @@ public class Animal {
         System.out.println("동물이 운다.");
     }
 }
-
+// 다형성 : 상속관계에서만 나타나는 현상, 어떠한 객체 주소값을 다른 타입이 저장할 수 있는 것
 class AnimalTest {
     public static void main(String[] args) {
         // 1. 부모타입은 자식 객체 주소값 담을 수 있다.

@@ -1,7 +1,7 @@
 package com.green.day16.ch7;
 
 import com.green.day13.ch6.MyMath2;
-import com.green.day15.ch7.*;
+import com.green.day15.ch7.*; // 전부 import한 효과
 
 
 

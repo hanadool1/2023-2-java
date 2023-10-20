@@ -15,7 +15,11 @@ public class Time {
         this.second = second;
     }
 
-    // private한 멤버필드에 값을 넣는 방법 2. setter 메소드
+    // 생성자만 있고 setter가 없는 경우 ? 객체를 생성할 때만 값을 넣고
+    // 생성자는 없고 setter만 있는 경우 ? 객체 생성할 때는 값을 못넣고, setter메소드로만 값을 넣을 수 있다.
+
+
+    // private한 멤버필드에 값을 넣는 방법 2. setter 메소드(void) > private으로 선언된 멤버필드의 값을 수정할 때 씀
     // 오른쪽 마우스 > Generate > Setter
     public void setHour(final int hour) {
         if (hour > MAX_HOUR) {
@@ -33,8 +37,8 @@ public class Time {
         this.second = second;
     }
 
-    // private한 멤버필드에 값을 빼는 방법 : 메소드를 통해서 뺀다.
-    public int getHour() {
+    // private한 멤버필드에 값을 빼는 방법 : getter 메소드를 통해서 뺀다.
+    public int getHour() { // getter는 파라미터가 무조건 없다.
         return this.hour;
     }
     public int getMinute() {
@@ -43,8 +47,6 @@ public class Time {
     public int getSecond() {
         return this.second;
     }
-
-
 
     @Override
     public String toString() {
