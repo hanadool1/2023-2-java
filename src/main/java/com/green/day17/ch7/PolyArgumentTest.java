@@ -25,6 +25,8 @@ class PolyArgumentTest2 {
 
         System.out.println(buyer);
 
+
+
         // buyer money가 부족하면 "잔액부족" money값 마이너스 처리 X
         // 잔액이 부족하지 않으면 Tv를 구입하셨습니다. > money는 차감 처리, bonusPoint 플러스 처리
     }
