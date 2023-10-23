@@ -41,7 +41,7 @@ class AnimalTest2 {
     }
     private static void callCrying(Animal ani) {
         ani.crying();
-        if(ani instanceof BullDog) {
+        if(ani instanceof BullDog) { // 왼쪽의 참조변수가  오른쪽의 타입(클래스명)울 형변환 가능한지? true/false
             BullDog bullDog = (BullDog)ani ;
             bullDog.jump();
         }

@@ -65,10 +65,10 @@ class Buyer {
 
 
 class Product {
+    // 생성자만 있고 setter가 없는 경우 ? 객체를 생성할 때만 값을 넣고
+    // 생성자는 없고 setter만 있는 경우 ? 객체 생성할 때는 값을 못넣고, setter메소드로만 값을 넣을 수 있다.
     private int price;
     private int bonusPoint;
-
-    public Product() {}
 
     protected Product(int price) {
         this.price = price;
