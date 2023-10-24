@@ -32,14 +32,14 @@ public class ArrayListTest {
 class ArrayListTest2 {
     public static void main(String[] args) {
         int v1 = 10; // 기본형
-        Integer v2 = 10; // 참조형, 래퍼타입
+        Integer v2 = 10; // 참조형, 래퍼타입 - 기본형의 객체형
         System.out.println(v1 == v2); // true
         List<Integer> list = new ArrayList(); // <>안에 기본형X, 래퍼타입 작성
         list.add(10); // 값을 한번 넣음 > 0번방에
         list.add(20); // 값 > 1번방
         list.add(30); // 값 > 2번방
 //        list.add(10.3f);
-        int val1 = list.get(0);
+        int val1 = list.get(0); // get다음에 오는 숫자는 0번방을 의미
         System.out.println(list.get(1)); // 값을 빼는 것
 
         System.out.println(list.size()); // add를 몇번했는지 ? 3
