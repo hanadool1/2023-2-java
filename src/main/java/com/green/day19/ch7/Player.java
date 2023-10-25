@@ -20,7 +20,7 @@ public abstract class Player { // 자식 중에 추상메소드가 하나라도 
 }
 
 class AudioPlayer extends Player {
-    @Override
+    @Override // annotation
     public void play(int pos) {
         System.out.println("Audio Play 위치 : " + pos);
     }
@@ -33,6 +33,6 @@ class VideoPlayer extends Player {
     }
 }
 
-abstract class DvdPlayer extends Player {
+abstract class DvdPlayer extends Player { // abstract 붙여서 빨간 줄 해결
 
 }
