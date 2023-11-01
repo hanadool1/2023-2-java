@@ -5,8 +5,14 @@ public class BoardEntity {
     private String title;
     private String ctnts;
     private String writer;
-    private String creater;
+    private String createdAt;
     private String updatedAt;
+
+    @Override
+    public String toString() {
+        return String.format("iboard : %d, title : %s, ctnts : %s, writer : %s, createdAt : %s, updatedAt: %s"
+                            ,iboard,title,ctnts,writer,createdAt,updatedAt);
+    }
 
     public int getIboard() {
         return iboard;
@@ -40,12 +46,12 @@ public class BoardEntity {
         this.writer = writer;
     }
 
-    public String getCreater() {
-        return creater;
+    public String getCreatedAt() {
+        return createdAt;
     }
 
-    public void setCreater(String creater) {
-        this.creater = creater;
+    public void setCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
     }
 
     public String getUpdatedAt() {
