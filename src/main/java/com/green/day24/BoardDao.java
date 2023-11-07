@@ -11,13 +11,13 @@ import java.util.List;
 
 // data access object
 public class BoardDao {
-    public static int insBoard(BoardEntity entity) {
+    public static int insBoard(BoardEntity entity) { // insert
         int result = 0;
         String sql = "INSERT INTO board (title,ctnts,writer)" +
-                "VALUES" + "(?,?,?)";
+                "VALUES (?, ?, ?)";
         System.out.println(sql);
         Connection con = null;
-        PreparedStatement ps = null;
+        PreparedStatement ps = null; // PreparedStatement가 생기면서 ? 사용가능
         try {
             con = MyConn.getConn();
             ps = con.prepareStatement(sql);
@@ -27,13 +27,13 @@ public class BoardDao {
             result = ps.executeUpdate(); // insert, update, delete
         } catch (Exception e) {
             e.printStackTrace();
-        } finally {
+        } finally { // 무조건 실행 -> 리소스를 너무 많이 잡아먹어서 닫아줘야함
             MyConn.close(con, ps);
         }
         return result;
     }
 
-    public static int delBoard(BoardEntity entity) {
+    public static int delBoard(BoardEntity entity) { // delete
         int result = 0;
         String sql = "DELETE FROM board " +
                 "WHERE iboard = ?";
@@ -52,7 +52,7 @@ public class BoardDao {
         return result;
     }
 
-    public static int updBoard(BoardEntity entity) {
+    public static int updBoard(BoardEntity entity) { // update
         int result = 0;
         String sql = "UPDATE board " +
                 "SET title = ?, ctnts = ?, writer = ?, updated_at = now() " +
@@ -75,7 +75,8 @@ public class BoardDao {
         return result;
     }
 
-    public static List<BoardEntity> selBoardList() {
+    // 검색, 페이징
+    public static List<BoardEntity> selBoardList() { // select 모든 데이터
         List<BoardEntity> list = new ArrayList<>();
         Connection con = null;
         PreparedStatement ps = null;
@@ -88,14 +89,10 @@ public class BoardDao {
 
             while (rs.next()) {
                 BoardEntity entity = new BoardEntity();
-                int iboard = rs.getInt("iboard");
-                String title = rs.getString("title");
-                String writer = rs.getString("writer");
-                String createdAt = rs.getString("created_at");
-                entity.setIboard(iboard);
-                entity.setTitle(title);
-                entity.setWriter(writer);
-                entity.setCreatedAt(createdAt);
+                entity.setIboard(rs.getInt("iboard"));
+                entity.setTitle(rs.getString("title"));
+                entity.setWriter(rs.getString("writer"));
+                entity.setCreatedAt(rs.getString("created_at"));
                 list.add(entity);
             }
         } catch (Exception e) {
@@ -106,7 +103,7 @@ public class BoardDao {
         return list;
     }
 
-    public static BoardEntity selBoardById(int pk) {
+    public static BoardEntity selBoardById(int pk) { // select 1개만
         BoardEntity entity = new BoardEntity();
         Connection con = null;
         PreparedStatement ps = null;
@@ -118,18 +115,12 @@ public class BoardDao {
             ps.setInt(1, pk);
             rs = ps.executeQuery(); // select만
             if (rs.next()) {
-                String title = rs.getString("title");
-                String ctnts = rs.getString("ctnts");
-                String writer = rs.getString("writer");
-                String createdAt = rs.getString("created_at");
-                String updatedAt = rs.getString("updated_at");
-
                 entity.setIboard(pk);
-                entity.setTitle(title);
-                entity.setCtnts(ctnts);
-                entity.setWriter(writer);
-                entity.setCreatedAt(createdAt);
-                entity.setUpdatedAt(updatedAt);
+                entity.setTitle(rs.getString("title"));
+                entity.setCtnts(rs.getString("ctnts"));
+                entity.setWriter(rs.getString("writer"));
+                entity.setCreatedAt(rs.getString("created_at"));
+                entity.setUpdatedAt(rs.getString("updated_at"));
                 return entity;
             }
         } catch (Exception e) {

@@ -27,7 +27,7 @@ class MyConnTest2 {
         // ctnts : 처음 작성하는 내용입니다.
         // writer : 홍길동
         BoardEntity be = new BoardEntity();
-        be.setTitle("간식");
+        be.setTitle("간");
         be.setCtnts("프링글스");
         be.setWriter("과자");
         int row = BoardDao.insBoard(be);
